@@ -1,10 +1,15 @@
 // When Start button is pressed, inititate 1st question
 // 1st question is displayed with set timer of 10 seconds, 4 choices
-// When choice is selected, function will compare the answer
+// Use eventlistener to store the selected choice
+// Selected choice is then compared using 'compareChoice' function
+// compareChoice function knows which questionNum is currently displayed, which knows what the correct answer is specific to questionNum
 // If choice is not correct, Wrong++, display correct answer, then move onto next question
 // If choice is correct, Correct++, congratulate, then move onto next question
-// After 10 questions, display the number of correct and wrong answers
+// changeQuestion is then called, which displays the a new question
+// After 5 questions, display the number of correct and wrong answers
 // Restart button
+
+
 
 // GLOBAL VARIABLES ========================
 var questionsList = [
@@ -36,19 +41,16 @@ var questionsList = [
   }
 ];
 
+var questionNum = 0;
 var choicesList = [];
 var correct = 0;
 var incorrect = 0;
 var notAnswered = 0;
-var time = 0;
 var number = 10;
 var intervalId;
 
-var questionDisplayed = $(".questions").text(questionsList[0].question);
-var choiceDisplayed0 = $("#choice0").text(questionsList[0].answerList[0])
-var choiceDisplayed1 = $("#choice1").text(questionsList[0].answerList[1])
-var choiceDisplayed2 = $("#choice2").text(questionsList[0].answerList[2])
-var choiceDisplayed3 = $("#choice3").text(questionsList[0].answerList[3])
+
+
 
 
 
@@ -63,12 +65,13 @@ function startGame() {
   correct = 0;
   incorrect = 0;
   notAnswered = 0;
-
   timer();
 
+$("#choice0").text(questionsList[0].answerList[0]);
+$("#choice1").text(questionsList[0].answerList[1]);
+$("#choice2").text(questionsList[0].answerList[2]);
+$("#choice3").text(questionsList[0].answerList[3]);
 
-  //Testing
-  //console.log(questionsList[0].question)
 }
 
 
@@ -90,7 +93,22 @@ function stop () {
     clearInterval(intervalId);
 }
 
-function changeQuestion() {}
+
+// Compare the clicked choice to questionNum and questionList[i].answer[0]
+function compareChoice (questionNum) {
+    
+}
+
+
+
+function changeQuestion() {
+// questionNum++
+// $("#choice3").text(questionsList[i].answerList[3])
+// i++
+
+}
+
+
 
 
 
@@ -103,6 +121,11 @@ $(document).ready(function() {
   $("#startBtn").on("click", function() {
     startGame();
   });
+
+  $(".choices").on("click", function () {
+      compareChoice();
+  });
+
 });
 
 // RANDOM TESTING ==========================
