@@ -1,0 +1,41 @@
+body {
+    background-image: url(../images/unsplash.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#questionNumber {
+    color: red;
+}
+
+.jumbotron {
+    opacity: 0.93;
+    filter: alpha(opacity=50);
+    margin: 155px 100px 0 100px;
+}
+
+.buttonWrap {
+    text-align: center;
+}
+
+#startBtn,.reset{
+    background-color: gray;
+    border-color: white;
+	color: white;
+	font-family: 'Sigmar One', sans-serif;
+	font-size: 30px;
+    padding: 0 50px 0 50px;
+    margin-top: 25%;
+}
+
+
+#startBtn:hover, .reset:hover{
+	background-color: #202364;
+    background: darkred;
+    border-color: gray;
+
+}
+
