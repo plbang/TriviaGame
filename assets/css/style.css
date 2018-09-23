@@ -8,13 +8,14 @@ body {
 }
 
 #questionNumber {
-    color: red;
+    color: black;
+    font-weight: bold;
 }
 
 .jumbotron {
     opacity: 0.93;
     filter: alpha(opacity=50);
-    margin: 155px 100px 0 100px;
+    margin: 155px 150px 0 150px;
 }
 
 .buttonWrap {
@@ -39,3 +40,12 @@ body {
 
 }
 
+#timer {
+    color: red;
+    font-weight: bold;
+}
+
+.questions {
+    color: black;
+    font-weight: bold;
+}
